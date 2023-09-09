@@ -41,11 +41,11 @@ export class UnsplashAPI {
 
   constructor(perPage) {
     this.page = 1;
-    this.query = 'cat';
+    this.query = null;
     this.perPage = perPage;
   }
 
-  fetchPhotos() {
+  getPhotos() {
     return axios
       .get(`${this.#BASE_URL}${this.#END_POINT}`, {
         params: {
